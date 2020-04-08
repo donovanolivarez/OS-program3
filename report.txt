@@ -1,1 +1,50 @@
 part1-output md5: ceabc02825a5b908e474b053074ab53c
+part2-output md5: c95b27848ae8d4354d87678d075001f7
+
+part3-output md5: d34ec1b7d6aaa8d6eb093b9b95c8e094
+
+part3-output md5: eae769fd560d5e7940b9e0e5f593e7f8
+
+
+1. I did not receive any help on these assignments from anyone else in the class.
+
+2. I think everything I did is correct since I ran the tests and the output was the same. 
+Also when calculating the md5, it came out the same.
+
+3. I do think what I did was correct.
+
+4. The challenges came from doing certain things that I have not done in a long time, such 
+as the bitwise operations. Other than that, making sure that the algorithm for replacements is
+correct is difficult. I drew pictures to help me keep track.
+
+5. Program output:
+
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ make clean
+rm -f part1.o part2.o pagetable.o phypages.o part3.o pagetable.o phypages.o
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ make 
+gcc -g -c part1.c
+gcc -g -o part1 part1.o
+gcc -g -c part2.c
+gcc -g -c pagetable.c
+gcc -g -c phypages.c
+gcc -g -o part2 part2.o pagetable.o phypages.o -lm
+gcc -g -c part3.c
+gcc -g -o part3 part3.o pagetable.o phypages.o -lm
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ ./part1 part1sequence part1-output 
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ md5sum part1-output 
+ceabc02825a5b908e474b053074ab53c  part1-output
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ ./part2 part2sequence part2-output 
+Part 2 page faults: 3210
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ md5sum part2-output 
+c95b27848ae8d4354d87678d075001f7  part2-output
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ ./part3 256 4096 1024 part2sequence part3-output 
+Part 3 page faults: 3324
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ md5sum part3-output 
+d34ec1b7d6aaa8d6eb093b9b95c8e094  part3-output
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ ./part3 128 4096 2048 part2sequence part3-output 
+Part 3 page faults: 2132
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ md5sum part3-output 
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring202donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ md5sum part3-output 
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ md5sum part3-output 
+eae769fd560d5e7940b9e0e5f593e7f8  part3-output
+donovan-olivarez@donovanolivarez-HP-Laptop-14-cf0xxx:~/Documents/Class/Spring2020/OS/assignments/OS-program3$ 
